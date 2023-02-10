@@ -33,6 +33,9 @@
 			this.timer1 = new System.Windows.Forms.Timer(this.components);
 			this.textBox1 = new System.Windows.Forms.TextBox();
 			this.button1 = new System.Windows.Forms.Button();
+			this.label1 = new System.Windows.Forms.Label();
+			this.label2 = new System.Windows.Forms.Label();
+			this.label_id = new System.Windows.Forms.Label();
 			this.SuspendLayout();
 			// 
 			// listBox1
@@ -43,6 +46,7 @@
 			this.listBox1.Name = "listBox1";
 			this.listBox1.Size = new System.Drawing.Size(783, 379);
 			this.listBox1.TabIndex = 0;
+			this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
 			// 
 			// timer1
 			// 
@@ -67,11 +71,40 @@
 			this.button1.UseVisualStyleBackColor = true;
 			this.button1.Click += new System.EventHandler(this.button1_Click);
 			// 
+			// label1
+			// 
+			this.label1.AutoSize = true;
+			this.label1.Location = new System.Drawing.Point(880, 61);
+			this.label1.Name = "label1";
+			this.label1.Size = new System.Drawing.Size(144, 15);
+			this.label1.TabIndex = 3;
+			this.label1.Text = "информация о процессе";
+			// 
+			// label2
+			// 
+			this.label2.AutoSize = true;
+			this.label2.Location = new System.Drawing.Point(856, 125);
+			this.label2.Name = "label2";
+			this.label2.Size = new System.Drawing.Size(65, 15);
+			this.label2.TabIndex = 4;
+			this.label2.Text = "Processl_id";
+			// 
+			// label_id
+			// 
+			this.label_id.AutoSize = true;
+			this.label_id.Location = new System.Drawing.Point(974, 127);
+			this.label_id.Name = "label_id";
+			this.label_id.Size = new System.Drawing.Size(0, 15);
+			this.label_id.TabIndex = 5;
+			// 
 			// Form1
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(800, 450);
+			this.ClientSize = new System.Drawing.Size(1067, 450);
+			this.Controls.Add(this.label_id);
+			this.Controls.Add(this.label2);
+			this.Controls.Add(this.label1);
 			this.Controls.Add(this.button1);
 			this.Controls.Add(this.textBox1);
 			this.Controls.Add(this.listBox1);
@@ -89,5 +122,8 @@
 		private System.Windows.Forms.Timer timer1;
 		private TextBox textBox1;
 		private Button button1;
+		private Label label1;
+		private Label label2;
+		private Label label_id;
 	}
 }
