@@ -43,6 +43,7 @@ namespace ProcessesApp
 				if (processesByName.Length > 0)
 				{
 					label_id.Text = processesByName[0].Id.ToString();
+					 = processesByName[0].StartTime.ToString("yyyy:MM:d: H:m:s:fff");
 				}
 			}
 		}

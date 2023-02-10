@@ -36,13 +36,17 @@
 			this.label1 = new System.Windows.Forms.Label();
 			this.label2 = new System.Windows.Forms.Label();
 			this.label_id = new System.Windows.Forms.Label();
+			this.label3 = new System.Windows.Forms.Label();
+			this.label4 = new System.Windows.Forms.Label();
+			this.label5 = new System.Windows.Forms.Label();
+			this.label6 = new System.Windows.Forms.Label();
 			this.SuspendLayout();
 			// 
 			// listBox1
 			// 
 			this.listBox1.FormattingEnabled = true;
 			this.listBox1.ItemHeight = 15;
-			this.listBox1.Location = new System.Drawing.Point(5, 61);
+			this.listBox1.Location = new System.Drawing.Point(30, 59);
 			this.listBox1.Name = "listBox1";
 			this.listBox1.Size = new System.Drawing.Size(783, 379);
 			this.listBox1.TabIndex = 0;
@@ -83,7 +87,7 @@
 			// label2
 			// 
 			this.label2.AutoSize = true;
-			this.label2.Location = new System.Drawing.Point(856, 125);
+			this.label2.Location = new System.Drawing.Point(836, 112);
 			this.label2.Name = "label2";
 			this.label2.Size = new System.Drawing.Size(65, 15);
 			this.label2.TabIndex = 4;
@@ -97,11 +101,51 @@
 			this.label_id.Size = new System.Drawing.Size(0, 15);
 			this.label_id.TabIndex = 5;
 			// 
+			// label3
+			// 
+			this.label3.AutoSize = true;
+			this.label3.Location = new System.Drawing.Point(836, 155);
+			this.label3.Name = "label3";
+			this.label3.Size = new System.Drawing.Size(58, 15);
+			this.label3.TabIndex = 6;
+			this.label3.Text = "Start time";
+			// 
+			// label4
+			// 
+			this.label4.AutoSize = true;
+			this.label4.Location = new System.Drawing.Point(836, 200);
+			this.label4.Name = "label4";
+			this.label4.Size = new System.Drawing.Size(84, 15);
+			this.label4.TabIndex = 7;
+			this.label4.Text = "ProcessorTime";
+			// 
+			// label5
+			// 
+			this.label5.AutoSize = true;
+			this.label5.Location = new System.Drawing.Point(836, 278);
+			this.label5.Name = "label5";
+			this.label5.Size = new System.Drawing.Size(75, 15);
+			this.label5.TabIndex = 8;
+			this.label5.Text = "ProcessCopy";
+			// 
+			// label6
+			// 
+			this.label6.AutoSize = true;
+			this.label6.Location = new System.Drawing.Point(836, 242);
+			this.label6.Name = "label6";
+			this.label6.Size = new System.Drawing.Size(76, 15);
+			this.label6.TabIndex = 9;
+			this.label6.Text = "ThreadCount";
+			// 
 			// Form1
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(1067, 450);
+			this.Controls.Add(this.label6);
+			this.Controls.Add(this.label5);
+			this.Controls.Add(this.label4);
+			this.Controls.Add(this.label3);
 			this.Controls.Add(this.label_id);
 			this.Controls.Add(this.label2);
 			this.Controls.Add(this.label1);
@@ -125,5 +169,9 @@
 		private Label label1;
 		private Label label2;
 		private Label label_id;
+		private Label label3;
+		private Label label4;
+		private Label label5;
+		private Label label6;
 	}
 }
