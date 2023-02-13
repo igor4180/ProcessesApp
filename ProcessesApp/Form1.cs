@@ -14,6 +14,7 @@ namespace ProcessesApp
 		{
 			UpdateProcessList();
 		}
+		Process KillProcess = new Process();
 
 		public void UpdateProcessList()
 		{
@@ -39,13 +40,40 @@ namespace ProcessesApp
 		{
 			if (listBox1.SelectedIndex != -1)
 			{
+				int orderNumber = 0;
+				int counter = 0;
+				foreach (object obj in listBox1.Items)
+				{
+					if ((string)obj == listBox1.Items[listBox1.SelectedIndex].ToString()&& counter != listBox1.SelectedIndex)
+					{
+						if (counter == listBox1.SelectedIndex)
+						{
+							break;
+						}
+						orderNumber++;
+					}
+					counter++;
+				}
 				Process[] processesByName = Process.GetProcessesByName(listBox1.Items[listBox1.SelectedIndex].ToString());
 				if (processesByName.Length > 0)
 				{
-					label_id.Text = processesByName[0].Id.ToString();
-					 = processesByName[0].StartTime.ToString("yyyy:MM:d: H:m:s:fff");
+					KillProcess = processesByName[orderNumber];
+					label_id.Text = processesByName[orderNumber].Id.ToString();
+					label_start.Text = processesByName[orderNumber].StartTime.ToString("yyyy:MM:d: H:m:s:fff");
+					label_processor.Text = processesByName[orderNumber].TotalProcessorTime.ToString();
+					label_count.Text = processesByName[orderNumber].Threads.Count.ToString();
+					label_copy.Text = processesByName.Count().ToString();
 				}
 			}
+			//foreach (Process process in processesByName)
+			//{
+			//	MessageBox.Show(process.GetHashCode().ToString);
+			//}
+		}
+
+		private void btn_closeProcess_Click(object sender, EventArgs e)
+		{
+			KillProcess.Kill();
 		}
 	}
 }

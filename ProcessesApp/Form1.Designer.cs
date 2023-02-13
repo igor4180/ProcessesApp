@@ -44,6 +44,7 @@
 			this.label_count = new System.Windows.Forms.Label();
 			this.label_copy = new System.Windows.Forms.Label();
 			this.label_start = new System.Windows.Forms.Label();
+			this.btn_closeProcess = new System.Windows.Forms.Button();
 			this.SuspendLayout();
 			// 
 			// listBox1
@@ -100,7 +101,7 @@
 			// label_id
 			// 
 			this.label_id.AutoSize = true;
-			this.label_id.Location = new System.Drawing.Point(974, 127);
+			this.label_id.Location = new System.Drawing.Point(920, 112);
 			this.label_id.Name = "label_id";
 			this.label_id.Size = new System.Drawing.Size(0, 15);
 			this.label_id.TabIndex = 5;
@@ -173,11 +174,22 @@
 			this.label_start.Size = new System.Drawing.Size(0, 15);
 			this.label_start.TabIndex = 13;
 			// 
+			// btn_closeProcess
+			// 
+			this.btn_closeProcess.Location = new System.Drawing.Point(908, 354);
+			this.btn_closeProcess.Name = "btn_closeProcess";
+			this.btn_closeProcess.Size = new System.Drawing.Size(75, 23);
+			this.btn_closeProcess.TabIndex = 14;
+			this.btn_closeProcess.Text = "закрыть";
+			this.btn_closeProcess.UseVisualStyleBackColor = true;
+			this.btn_closeProcess.Click += new System.EventHandler(this.btn_closeProcess_Click);
+			// 
 			// Form1
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(1067, 450);
+			this.Controls.Add(this.btn_closeProcess);
 			this.Controls.Add(this.label_start);
 			this.Controls.Add(this.label_copy);
 			this.Controls.Add(this.label_count);
@@ -217,5 +229,6 @@
 		private Label label_count;
 		private Label label_copy;
 		private Label label_start;
+		private Button btn_closeProcess;
 	}
 }
