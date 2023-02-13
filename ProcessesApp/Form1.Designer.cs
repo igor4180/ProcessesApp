@@ -40,6 +40,10 @@
 			this.label4 = new System.Windows.Forms.Label();
 			this.label5 = new System.Windows.Forms.Label();
 			this.label6 = new System.Windows.Forms.Label();
+			this.label_processor = new System.Windows.Forms.Label();
+			this.label_count = new System.Windows.Forms.Label();
+			this.label_copy = new System.Windows.Forms.Label();
+			this.label_start = new System.Windows.Forms.Label();
 			this.SuspendLayout();
 			// 
 			// listBox1
@@ -137,11 +141,47 @@
 			this.label6.TabIndex = 9;
 			this.label6.Text = "ThreadCount";
 			// 
+			// label_processor
+			// 
+			this.label_processor.AutoSize = true;
+			this.label_processor.Location = new System.Drawing.Point(940, 200);
+			this.label_processor.Name = "label_processor";
+			this.label_processor.Size = new System.Drawing.Size(0, 15);
+			this.label_processor.TabIndex = 10;
+			// 
+			// label_count
+			// 
+			this.label_count.AutoSize = true;
+			this.label_count.Location = new System.Drawing.Point(948, 242);
+			this.label_count.Name = "label_count";
+			this.label_count.Size = new System.Drawing.Size(0, 15);
+			this.label_count.TabIndex = 11;
+			// 
+			// label_copy
+			// 
+			this.label_copy.AutoSize = true;
+			this.label_copy.Location = new System.Drawing.Point(949, 278);
+			this.label_copy.Name = "label_copy";
+			this.label_copy.Size = new System.Drawing.Size(0, 15);
+			this.label_copy.TabIndex = 12;
+			// 
+			// label_start
+			// 
+			this.label_start.AutoSize = true;
+			this.label_start.Location = new System.Drawing.Point(940, 155);
+			this.label_start.Name = "label_start";
+			this.label_start.Size = new System.Drawing.Size(0, 15);
+			this.label_start.TabIndex = 13;
+			// 
 			// Form1
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(1067, 450);
+			this.Controls.Add(this.label_start);
+			this.Controls.Add(this.label_copy);
+			this.Controls.Add(this.label_count);
+			this.Controls.Add(this.label_processor);
 			this.Controls.Add(this.label6);
 			this.Controls.Add(this.label5);
 			this.Controls.Add(this.label4);
@@ -173,5 +213,9 @@
 		private Label label4;
 		private Label label5;
 		private Label label6;
+		private Label label_processor;
+		private Label label_count;
+		private Label label_copy;
+		private Label label_start;
 	}
 }
