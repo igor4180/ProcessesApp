@@ -45,13 +45,15 @@
 			this.label_copy = new System.Windows.Forms.Label();
 			this.label_start = new System.Windows.Forms.Label();
 			this.btn_closeProcess = new System.Windows.Forms.Button();
+			this.btn_newProcessName = new System.Windows.Forms.Button();
+			this.textBox2 = new System.Windows.Forms.TextBox();
 			this.SuspendLayout();
 			// 
 			// listBox1
 			// 
 			this.listBox1.FormattingEnabled = true;
 			this.listBox1.ItemHeight = 15;
-			this.listBox1.Location = new System.Drawing.Point(30, 59);
+			this.listBox1.Location = new System.Drawing.Point(12, 41);
 			this.listBox1.Name = "listBox1";
 			this.listBox1.Size = new System.Drawing.Size(783, 379);
 			this.listBox1.TabIndex = 0;
@@ -176,7 +178,7 @@
 			// 
 			// btn_closeProcess
 			// 
-			this.btn_closeProcess.Location = new System.Drawing.Point(908, 354);
+			this.btn_closeProcess.Location = new System.Drawing.Point(920, 305);
 			this.btn_closeProcess.Name = "btn_closeProcess";
 			this.btn_closeProcess.Size = new System.Drawing.Size(75, 23);
 			this.btn_closeProcess.TabIndex = 14;
@@ -184,11 +186,32 @@
 			this.btn_closeProcess.UseVisualStyleBackColor = true;
 			this.btn_closeProcess.Click += new System.EventHandler(this.btn_closeProcess_Click);
 			// 
+			// btn_newProcessName
+			// 
+			this.btn_newProcessName.Enabled = false;
+			this.btn_newProcessName.Location = new System.Drawing.Point(880, 397);
+			this.btn_newProcessName.Name = "btn_newProcessName";
+			this.btn_newProcessName.Size = new System.Drawing.Size(173, 23);
+			this.btn_newProcessName.TabIndex = 15;
+			this.btn_newProcessName.Text = "запустить новый процесс";
+			this.btn_newProcessName.UseVisualStyleBackColor = true;
+			this.btn_newProcessName.Click += new System.EventHandler(this.btn_newProcessName_Click);
+			// 
+			// textBox2
+			// 
+			this.textBox2.Location = new System.Drawing.Point(818, 352);
+			this.textBox2.Name = "textBox2";
+			this.textBox2.Size = new System.Drawing.Size(317, 23);
+			this.textBox2.TabIndex = 16;
+			this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+			// 
 			// Form1
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(1067, 450);
+			this.ClientSize = new System.Drawing.Size(1147, 534);
+			this.Controls.Add(this.textBox2);
+			this.Controls.Add(this.btn_newProcessName);
 			this.Controls.Add(this.btn_closeProcess);
 			this.Controls.Add(this.label_start);
 			this.Controls.Add(this.label_copy);
@@ -230,5 +253,7 @@
 		private Label label_copy;
 		private Label label_start;
 		private Button btn_closeProcess;
+		private Button btn_newProcessName;
+		private TextBox textBox2;
 	}
 }

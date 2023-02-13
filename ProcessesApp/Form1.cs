@@ -75,5 +75,25 @@ namespace ProcessesApp
 		{
 			KillProcess.Kill();
 		}
+
+
+		private void btn_newProcessName_Click(object sender, EventArgs e)
+		{
+			Process process = new Process();
+			process.StartInfo = new ProcessStartInfo(textBox2.Text);
+			process.Start(); 
+		}
+
+		private void textBox2_TextChanged(object sender, EventArgs e)
+		{
+			if (textBox2.Text.Length > 0)
+			{
+				btn_newProcessName.Enabled = true;
+			}
+			else
+			{
+				btn_newProcessName.Enabled = false;
+			}
+		}
 	}
 }
